@@ -4,12 +4,17 @@ import backIcon from "../../assets/images/icons/back.svg";
 import logoImg from "../../assets/images/logo.svg";
 import "./styles.css";
 
+// This interface is responsible for storing PageHeader's props and its types
 interface PageHeaderProps {
     title: string;
-    // title?: string; SE FOR OBRIGATÓRIO COLOCA O "?"
+    // title?: string; if its a required prop we can use this one instead
 }
 
-const PageHeader: React.FunctionComponent<PageHeaderProps> = (props) => {
+// Creating PageHeader component and telling it that its a component that has some props
+// and this props are listed above in PageHeaderProps.
+
+// const PageHeader: React.FunctionComponent<PageHeaderProps> = (props) => {
+const PageHeader = (props: any) => {
     return (
         <header className="page-header">
             <div className="top-bar-container">
