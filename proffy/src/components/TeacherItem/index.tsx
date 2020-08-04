@@ -2,10 +2,12 @@ import React from "react";
 import "./styles.css";
 import whatsappIcon from "../../assets/images/icons/whatsapp.svg";
 
+// Component responsible for displaying some teachers info
 function TeacherItem() {
     return (
         <article className="teacher-item">
             <header>
+                {/* Teachers profile picture */}
                 <img
                     src="https://avatars2.githubusercontent.com/u/36971021?s=460&u=459ffffd7f8f07b6336fd19f780ef00c879795df&v=4"
                     alt="Henrique dos Santos"
@@ -15,6 +17,7 @@ function TeacherItem() {
                     <span>Matemática</span>
                 </div>
             </header>
+            {/* A tiny description provided by each teacher */}
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 <br />

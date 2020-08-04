@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 import "./styles.css";
 
+// Landing component is responsible to show our application homepage.
 function Landing() {
     return (
         <div id="page-landing">
@@ -22,15 +23,18 @@ function Landing() {
                     className="hero-image"
                 />
                 <div className="buttons-container">
+                    {/* Creating a link to our /study page via Routes */}
                     <Link to="/study" className="study">
                         <img src={studyIcon} alt="Estudar" />
                         Estudar
                     </Link>
+                    {/* Creating a link to our /give-classes page via Routes */}
                     <Link to="/give-classes" className="give-classes">
                         <img src={giveClassesIcon} alt="Dar aulas" />
                         Dar aulas
                     </Link>
                 </div>
+                {/* The span below shows the total number of user-made connections  */}
                 <span className="total-connections">
                     Total de 200 conexões já realizadas
                     <img src={purpleHeartIcon} alt="Coração roxo" />

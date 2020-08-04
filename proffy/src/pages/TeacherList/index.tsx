@@ -3,6 +3,8 @@ import "./styles.css";
 import PageHeader from "../../components/PageHeader";
 import TeacherItem from "../../components/TeacherItem";
 
+// TeacherList will show available teachers in our application to students/ users
+// who wants to hire a teacher.
 function TeacherList() {
     return (
         <div id="page-teacher-list" className="container">
@@ -26,6 +28,7 @@ function TeacherList() {
             </PageHeader>
 
             <main>
+                {/* Just showing how this page should be with many available teachers */}
                 <TeacherItem />
                 <TeacherItem />
                 <TeacherItem />

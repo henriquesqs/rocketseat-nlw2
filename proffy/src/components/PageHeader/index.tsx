@@ -18,13 +18,15 @@ const PageHeader = (props: any) => {
     return (
         <header className="page-header">
             <div className="top-bar-container">
+                {/* Creating a link to our homepage */}
                 <Link to="/">
                     <img src={backIcon} alt="Voltar" />
                 </Link>
-                <img src={logoImg} alt="Voltar" />
+                <img src={logoImg} alt="Logo" />
             </div>
 
             <div className="header-content">
+                {/* Here we receive title and headers component content via its props (title and children) */}
                 <strong>{props.title}</strong>
                 {props.children}
             </div>
