@@ -9,7 +9,7 @@ export async function up(knex: Knex) {
         table.integer("from").notNullable();
         table.integer("to").notNullable();
 
-        // Creating foreign key to "user_id" on "users" table
+        // Creating foreign key to "id" on "classes" table
         table
             .integer("class_id")
             .notNullable()
@@ -18,7 +18,6 @@ export async function up(knex: Knex) {
             .onUpdate("CASCADE")
             .onDelete("CASCADE");
     });
-
 }
 
 // Undo changes
