@@ -1,9 +1,11 @@
 import express from "express";
+import cors from "cors";
 import routes from "./routes";
 
 const app = express(); // creating express application
 app.use(express.json()); // express must undedstand json
 app.use(routes);
+app.use(cors());
 
 app.listen(3333); // listening to http requests on port 3333 (access via localhost:3333)
 
