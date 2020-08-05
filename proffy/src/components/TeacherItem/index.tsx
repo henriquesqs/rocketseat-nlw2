@@ -17,6 +17,7 @@ function TeacherItem() {
                     <span>Matemática</span>
                 </div>
             </header>
+
             {/* A tiny description provided by each teacher */}
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -2,6 +2,8 @@ import React from "react";
 import "./styles.css";
 import PageHeader from "../../components/PageHeader";
 import TeacherItem from "../../components/TeacherItem";
+import Input from "../../components/Input";
+import Select from "../../components/Select";
 
 // TeacherList will show available teachers in our application to students/ users
 // who wants to hire a teacher.
@@ -10,20 +12,26 @@ function TeacherList() {
         <div id="page-teacher-list" className="container">
             <PageHeader title="Estes são os proffys disponíveis.">
                 <form id="search-teachers">
-                    <div className="input-block">
-                        <label htmlFor="subject">Matéria</label>
-                        <input type="text" id="subject"></input>
-                    </div>
-
-                    <div className="input-block">
-                        <label htmlFor="week-day">Dia da semana</label>
-                        <input type="text" id="week-day"></input>
-                    </div>
-
-                    <div className="input-block">
-                        <label htmlFor="time">Hora</label>
-                        <input type="text" id="time"></input>
-                    </div>
+                    <Select
+                        name="subject"
+                        label="Matéria"
+                        options={[
+                            { value: "Biologia", label: "Biologia" },
+                            { value: "Ciências", label: "Ciências" },
+                            { value: "Física", label: "Física" },
+                            { value: "Geografia", label: "Geografia" },
+                            { value: "Matemática", label: "Matemática" },
+                            { value: "Português", label: "Português" },
+                            { value: "Inglês", label: "Inglês" },
+                            { value: "História", label: "História" },
+                            {
+                                value: "Educação Física",
+                                label: "Educação Física",
+                            },
+                        ]}
+                    />
+                    <Input name="week-day" label="Dia da semana"></Input>
+                    <Input type="time" name="time" label="Hora"></Input>
                 </form>
             </PageHeader>
 
