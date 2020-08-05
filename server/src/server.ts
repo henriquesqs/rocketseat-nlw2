@@ -1,12 +1,9 @@
 import express from "express";
+import routes from "./routes";
 
 const app = express(); // creating express application
 app.use(express.json()); // express must undedstand json
-
-// creating route to /users resource with a POST request
-app.get("/", (request, response) => {
-    return response.json({ message: "hello world" });
-});
+app.use(routes);
 
 app.listen(3333); // listening to http requests on port 3333 (access via localhost:3333)
 
