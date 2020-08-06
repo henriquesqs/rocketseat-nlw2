@@ -4,37 +4,33 @@ import convertHourToMinutes from "../utils/convertHourToMinutes";
 
 // Creating an interface to tell each type from each props of schedule
 interface scheduleItem {
-    week_day: number;
-    from: string;
-    to: string;
-}
+    week_day: number,
+    from: string,
+    to: string
+};
 
 export default class ClassesController {
     async index(request: Request, response: Response) {
-        const filters = request.query;
+        const filters = request.query;        
+        const subject = filters.subject as string;
+        const week_day = filters.week_day as string;
+        const time = filters.time as string;
+        const timeInMinutes = convertHourToMinutes(time);
 
         if (!filters.week_day || !filters.subject || !filters.time) {
             return response.status(400).json({
                 erro: "Missing filters to search classes.",
-            });
+            })
         }
-
-        const subject = filters.subject as string;
-        const week_day = filters.week_day as string;
-        const time = filters.time as string;
-
-        const timeInMinutes = convertHourToMinutes(time);
 
         const classes = await db("classes")
             .whereExists(function () {
                 this.select("class_schedule.*")
                     .from("class_schedule")
                     .whereRaw("`class_schedule`.`class_id` = `classes`.`id`")
-                    .whereRaw("`class_schedule`.`week_day` = ??", [
-                        Number(week_day),
-                    ])
+                    .whereRaw("`class_schedule`.`week_day` = ??", [Number(week_day)])
                     .whereRaw("`class_schedule`.`from` <= ??", [timeInMinutes])
-                    .whereRaw("`class_schedule`.`from` > ??", [timeInMinutes]);
+                    .whereRaw("`class_schedule`.`to` > ??", [timeInMinutes]);
             })
             .where("classes.subject", "=", subject)
             .join("users", "classes.user_id", "=", "users.id")
@@ -94,7 +90,7 @@ export default class ClassesController {
 
             await trx.commit(); // Do/commit above changes on db
 
-            return response.status(201).send(); // Returning a success response
+            return response.status(201).json({message: "Registration successfully created."}); // Returning a success response
         } catch (err) {
             // If got an error, rollback above changes and print an error message
             await trx.rollback();
