@@ -2,34 +2,38 @@ import React from "react";
 import "./styles.css";
 import whatsappIcon from "../../assets/images/icons/whatsapp.svg";
 
+export interface Teacher {
+    avatar: string;
+    bio: string;
+    cost: number;
+    id: number;
+    name: string;
+    subject: string;
+    whatsapp: string;
+}
+
+interface TeacherItemProps {
+    teacher: Teacher;
+}
+
 // Component responsible for displaying some teachers info
-function TeacherItem() {
+const TeacherItem: React.FC<TeacherItemProps> = ({teacher}) => {
     return (
         <article className="teacher-item">
             <header>
                 {/* Teachers profile picture */}
-                <img
-                    src="https://avatars2.githubusercontent.com/u/36971021?s=460&u=459ffffd7f8f07b6336fd19f780ef00c879795df&v=4"
-                    alt="Henrique dos Santos"
-                />
+                <img src={teacher.avatar} alt={teacher.name} />
                 <div>
-                    <strong>Henrique dos Santos</strong>
-                    <span>Matemática</span>
+                    <strong>{teacher.name}</strong>
+                    <span>{teacher.subject}</span>
                 </div>
             </header>
 
             {/* A tiny description provided by each teacher */}
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                <br />
-                <br />
-                Vivamus quis malesuada tortor. In malesuada viverra enim vitae
-                faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit.
-            </p>
+            <p>{teacher.bio}</p>
             <footer>
                 <p>
-                    Preço/hora: <strong>R$83,00</strong>
+                    Preço/hora: <strong>R${teacher.cost}</strong>
                 </p>
                 <button type="button">
                     <img src={whatsappIcon} alt="Whatsapp" />
@@ -38,6 +42,6 @@ function TeacherItem() {
             </footer>
         </article>
     );
-}
+};
 
 export default TeacherItem;

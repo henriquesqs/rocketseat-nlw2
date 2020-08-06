@@ -1,32 +1,29 @@
 import React, { useState, FormEvent } from 'react';
 import { useHistory } from 'react-router-dom'
-
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import Textarea from '../../components/Textarea';
 import Select from '../../components/Select';
 import api from '../../services/api';
-
 import warningIcon from '../../assets/images/icons/warning.svg'
-
 import './styles.css';
 
 function TeacherForm() {
+
+    // Using history to redirect user to landing page after successfully register
     const history = useHistory();
 
+    // Creating states to handle user inputs
     const [name, setName] = useState('');
     const [avatar, setAvatar] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
     const [bio, setBio] = useState('');
-
     const [subject, setSubject] = useState('');
     const [cost, setCost] = useState('');
-
     const [scheduleItems, setScheduleItems] = useState([
         { week_day: 0, from: '', to: '' }
     ]);
-
-
+    
     function addNewScheduleItem() {
         setScheduleItems([
             ...scheduleItems,
@@ -35,18 +32,19 @@ function TeacherForm() {
     }
 
     function setScheduleItemValue(position: number, field: string, value: string) {
-        const updatedScheduleItems = scheduleItems.map((scheduleItem, index) => {
+        const newScheduleItems = scheduleItems.map((scheduleItem, index) => {
             if (index === position) {
                 return { ...scheduleItem, [field]: value };
             }
             return scheduleItem;
         });
 
-        setScheduleItems(updatedScheduleItems);
+        setScheduleItems(newScheduleItems);
     }
 
-    function handleCreateClass(e: FormEvent) {
-        e.preventDefault();
+    function createClass(event: FormEvent) {
+        
+        event.preventDefault();
 
         api.post('classes', {
             name,
@@ -58,10 +56,9 @@ function TeacherForm() {
             schedule: scheduleItems
         }).then(() => {
             alert('Cadastro realizado com sucesso!');
-
-            history.push('/');
+            history.push('/'); // redirecting user to landing page (/)
         }).catch(() => {
-            alert('Erro no cadastro!');
+            alert('Erro no cadastro...');
         })
     }
 
@@ -73,7 +70,7 @@ function TeacherForm() {
             />
 
             <main>
-                <form onSubmit={handleCreateClass}>
+                <form onSubmit={createClass}>
                     <fieldset>
                         <legend>Seus dados</legend>
 
@@ -81,25 +78,25 @@ function TeacherForm() {
                             name="name"
                             label="Nome completo"
                             value={name}
-                            onChange={(e) => { setName(e.target.value) }}
+                            onChange={(event) => { setName(event.target.value) }}
                         />
                         <Input
                             name="avatar"
                             label="Avatar"
                             value={avatar}
-                            onChange={(e) => { setAvatar(e.target.value) }}
+                            onChange={(event) => { setAvatar(event.target.value) }}
                         />
                         <Input
                             name="whatsapp"
                             label="WhatsApp"
                             value={whatsapp}
-                            onChange={(e) => { setWhatsapp(e.target.value) }}
+                            onChange={(event) => { setWhatsapp(event.target.value) }}
                         />
                         <Textarea
                             name="bio"
                             label="Biografia"
                             value={bio}
-                            onChange={(e) => { setBio(e.target.value) }}
+                            onChange={(event) => { setBio(event.target.value) }}
                         />
                     </fieldset>
 
@@ -110,7 +107,7 @@ function TeacherForm() {
                             name="subject"
                             label="Matéria"
                             value={subject}
-                            onChange={(e) => { setSubject(e.target.value) }}
+                            onChange={(event) => { setSubject(event.target.value) }}
                             options={[
                                 { value: 'Artes', label: 'Artes' },
                                 { value: 'Biologia', label: 'Biologia' },
@@ -128,7 +125,7 @@ function TeacherForm() {
                             name="cost"
                             label="Custo da sua hora por aula"
                             value={cost}
-                            onChange={(e) => { setCost(e.target.value) }}
+                            onChange={(event) => { setCost(event.target.value) }}
                         />
                     </fieldset>
 
@@ -147,7 +144,7 @@ function TeacherForm() {
                                         name="week_day"
                                         label="Dia da semana"
                                         value={scheduleItem.week_day}
-                                        onChange={e => setScheduleItemValue(index, 'week_day', e.target.value)}
+                                        onChange={event => setScheduleItemValue(index, 'week_day', event.target.value)}
                                         options={[
                                             { value: '0', label: 'Domingo' },
                                             { value: '1', label: 'Segunda-feira' },
@@ -163,14 +160,14 @@ function TeacherForm() {
                                         label="Das"
                                         type="time"
                                         value={scheduleItem.from}
-                                        onChange={e => setScheduleItemValue(index, 'from', e.target.value)}
+                                        onChange={event => setScheduleItemValue(index, 'from', event.target.value)}
                                     />
                                     <Input
                                         name="to"
                                         label="Até"
                                         type="time"
                                         value={scheduleItem.to}
-                                        onChange={e => setScheduleItemValue(index, 'to', e.target.value)}
+                                        onChange={event => setScheduleItemValue(index, 'to', event.target.value)}
                                     />
                                 </div>
                             );
