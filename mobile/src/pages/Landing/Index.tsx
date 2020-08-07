@@ -11,8 +11,13 @@ import {RectButton} from "react-native-gesture-handler";
 function Landing() {
     const {navigate} = useNavigation();
 
+    // Method to redirect user to Give-Classes page
     function handleNavigationToGiveClassesPage() {
         navigate("GiveClasses");
+    }
+
+    function handleNavigationToStudyPages() {
+        navigate("Study");
     }
 
     return (
@@ -24,11 +29,15 @@ function Landing() {
             </Text>
 
             <View style={styles.buttonsContainer}>
-                <RectButton style={[styles.button, styles.buttonPrimary]}>
+                <RectButton
+                    style={[styles.button, styles.buttonPrimary]}
+                    onPress={handleNavigationToStudyPages}
+                >
                     <Image source={studyIcon} />
                     <Text style={styles.buttonText}>Estudar</Text>
                 </RectButton>
                 <RectButton
+                    // When user presses this button, redirects to Give-Classes page
                     onPress={handleNavigationToGiveClassesPage}
                     style={[styles.button, styles.buttonSecondary]}
                 >
