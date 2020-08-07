@@ -6,13 +6,16 @@
 ## Requisites
 - You must have [npm](https://nodejs.org/en/) or [yarn](https://yarnpkg.com/) package manager in order to install the required packages.
 
+## Instructions (geral)
+- Open a terminal and run `npm install` or `yarn install` to install dependencies.
+
 ## Instructions (server)
 - Go to *server* folder;
-- Run the app by using `npm start` or `yarn start`;
+- Run the app by using `npm start` or `yarn start`.
 
 ## Instructions (web)
 - Go to *web* folder;
-- Run the app by using `npm start` or `yarn start`;
+- Run the app by using `npm start` or `yarn start`.
 
 ## Instructions (mobile)
 - Download *expo* app from Play Store ou Apple Store;
