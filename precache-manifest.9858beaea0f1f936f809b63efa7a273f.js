@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fbeedaa49a8cfe2a78ab3779bb393a4b",
+    "revision": "9567a8d1667053411212541fe37fbce7",
     "url": "/rocketseat-nlw2/index.html"
   },
   {
-    "revision": "b68c960836fb9eaf9cd7",
+    "revision": "fbe9da993534486c7dc7",
     "url": "/rocketseat-nlw2/static/css/main.9699500e.chunk.css"
   },
   {
-    "revision": "abfb26b5c863071fe42d",
-    "url": "/rocketseat-nlw2/static/js/2.c8a7d12a.chunk.js"
+    "revision": "65e70cdc6b6bc97cb676",
+    "url": "/rocketseat-nlw2/static/js/2.db4310c5.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/rocketseat-nlw2/static/js/2.c8a7d12a.chunk.js.LICENSE.txt"
+    "url": "/rocketseat-nlw2/static/js/2.db4310c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b68c960836fb9eaf9cd7",
-    "url": "/rocketseat-nlw2/static/js/main.1b9e60c3.chunk.js"
+    "revision": "fbe9da993534486c7dc7",
+    "url": "/rocketseat-nlw2/static/js/main.1ebc7196.chunk.js"
   },
   {
     "revision": "aa02c4536091c179212f",
