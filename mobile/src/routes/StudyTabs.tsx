@@ -3,6 +3,9 @@ import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import TeacherList from "../pages/TeacherList/Index";
 import Favorites from "../pages/Favorites/Index";
 import {Ionicons} from "@expo/vector-icons";
+import giveClassesIcon from "../assets/images/icons/give-classes.png";
+import heartOutlineIcon from "../assets/images/icons/heart-outline.png";
+import {Image} from "react-native";
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -43,10 +46,13 @@ function StudyTabs() {
                     tabBarLabel: "Proffys",
                     tabBarIcon: ({color, size, focused}) => {
                         return (
-                            <Ionicons
-                                name="ios-easel"
-                                size={size}
-                                color={focused ? "#8257e5" : color}
+                            <Image
+                                source={giveClassesIcon}
+                                resizeMode="contain"
+                                style={{
+                                    tintColor: focused ? "#8257e5" : color,
+                                    height: 25,
+                                }}
                             />
                         );
                     },
@@ -59,10 +65,12 @@ function StudyTabs() {
                     tabBarLabel: "Favoritos",
                     tabBarIcon: ({color, size, focused}) => {
                         return (
-                            <Ionicons
-                                name="ios-heart"
-                                size={size}
-                                color={focused ? "#8257e5" : color}
+                            <Image
+                                source={heartOutlineIcon}
+                                style={{
+                                    tintColor: focused ? "#8257e5" : color,
+                                    height: 28,
+                                }}
                             />
                         );
                     },
