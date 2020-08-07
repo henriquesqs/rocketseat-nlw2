@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/rocketseat-nlw2/tree/master/web/src/static/css/main.9699500e.chunk.css",
-    "main.js": "/rocketseat-nlw2/tree/master/web/src/static/js/main.8ac9bd48.chunk.js",
-    "main.js.map": "/rocketseat-nlw2/tree/master/web/src/static/js/main.8ac9bd48.chunk.js.map",
-    "runtime-main.js": "/rocketseat-nlw2/tree/master/web/src/static/js/runtime-main.a4b57682.js",
-    "runtime-main.js.map": "/rocketseat-nlw2/tree/master/web/src/static/js/runtime-main.a4b57682.js.map",
-    "static/js/2.db4310c5.chunk.js": "/rocketseat-nlw2/tree/master/web/src/static/js/2.db4310c5.chunk.js",
-    "static/js/2.db4310c5.chunk.js.map": "/rocketseat-nlw2/tree/master/web/src/static/js/2.db4310c5.chunk.js.map",
-    "index.html": "/rocketseat-nlw2/tree/master/web/src/index.html",
-    "precache-manifest.c24d2c7edf1ede607e3187e9a941c2e9.js": "/rocketseat-nlw2/tree/master/web/src/precache-manifest.c24d2c7edf1ede607e3187e9a941c2e9.js",
-    "service-worker.js": "/rocketseat-nlw2/tree/master/web/src/service-worker.js",
-    "static/css/main.9699500e.chunk.css.map": "/rocketseat-nlw2/tree/master/web/src/static/css/main.9699500e.chunk.css.map",
-    "static/js/2.db4310c5.chunk.js.LICENSE.txt": "/rocketseat-nlw2/tree/master/web/src/static/js/2.db4310c5.chunk.js.LICENSE.txt",
-    "static/media/back.svg": "/rocketseat-nlw2/tree/master/web/src/static/media/back.dc8c47fa.svg",
-    "static/media/give-classes.svg": "/rocketseat-nlw2/tree/master/web/src/static/media/give-classes.156102ee.svg",
-    "static/media/landing.svg": "/rocketseat-nlw2/tree/master/web/src/static/media/landing.211f2bb0.svg",
-    "static/media/logo.svg": "/rocketseat-nlw2/tree/master/web/src/static/media/logo.86fef799.svg",
-    "static/media/purple-heart.svg": "/rocketseat-nlw2/tree/master/web/src/static/media/purple-heart.bfdb3ebe.svg",
-    "static/media/study.svg": "/rocketseat-nlw2/tree/master/web/src/static/media/study.e7a7e1b4.svg",
-    "static/media/warning.svg": "/rocketseat-nlw2/tree/master/web/src/static/media/warning.6dfaa2f9.svg",
-    "static/media/whatsapp.svg": "/rocketseat-nlw2/tree/master/web/src/static/media/whatsapp.45c6e6ec.svg"
+    "main.css": "/rocketseat-nlw2/static/css/main.9699500e.chunk.css",
+    "main.js": "/rocketseat-nlw2/static/js/main.1b9e60c3.chunk.js",
+    "main.js.map": "/rocketseat-nlw2/static/js/main.1b9e60c3.chunk.js.map",
+    "runtime-main.js": "/rocketseat-nlw2/static/js/runtime-main.9f734b65.js",
+    "runtime-main.js.map": "/rocketseat-nlw2/static/js/runtime-main.9f734b65.js.map",
+    "static/js/2.c8a7d12a.chunk.js": "/rocketseat-nlw2/static/js/2.c8a7d12a.chunk.js",
+    "static/js/2.c8a7d12a.chunk.js.map": "/rocketseat-nlw2/static/js/2.c8a7d12a.chunk.js.map",
+    "index.html": "/rocketseat-nlw2/index.html",
+    "precache-manifest.4617b97650f26f0bb59eb9792d66ee8c.js": "/rocketseat-nlw2/precache-manifest.4617b97650f26f0bb59eb9792d66ee8c.js",
+    "service-worker.js": "/rocketseat-nlw2/service-worker.js",
+    "static/css/main.9699500e.chunk.css.map": "/rocketseat-nlw2/static/css/main.9699500e.chunk.css.map",
+    "static/js/2.c8a7d12a.chunk.js.LICENSE.txt": "/rocketseat-nlw2/static/js/2.c8a7d12a.chunk.js.LICENSE.txt",
+    "static/media/back.svg": "/rocketseat-nlw2/static/media/back.dc8c47fa.svg",
+    "static/media/give-classes.svg": "/rocketseat-nlw2/static/media/give-classes.156102ee.svg",
+    "static/media/landing.svg": "/rocketseat-nlw2/static/media/landing.211f2bb0.svg",
+    "static/media/logo.svg": "/rocketseat-nlw2/static/media/logo.86fef799.svg",
+    "static/media/purple-heart.svg": "/rocketseat-nlw2/static/media/purple-heart.bfdb3ebe.svg",
+    "static/media/study.svg": "/rocketseat-nlw2/static/media/study.e7a7e1b4.svg",
+    "static/media/warning.svg": "/rocketseat-nlw2/static/media/warning.6dfaa2f9.svg",
+    "static/media/whatsapp.svg": "/rocketseat-nlw2/static/media/whatsapp.45c6e6ec.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a4b57682.js",
-    "static/js/2.db4310c5.chunk.js",
+    "static/js/runtime-main.9f734b65.js",
+    "static/js/2.c8a7d12a.chunk.js",
     "static/css/main.9699500e.chunk.css",
-    "static/js/main.8ac9bd48.chunk.js"
+    "static/js/main.1b9e60c3.chunk.js"
   ]
 }
