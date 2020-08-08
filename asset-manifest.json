@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/rocketseat-nlw2/static/css/main.9699500e.chunk.css",
-    "main.js": "/rocketseat-nlw2/static/js/main.de075f6a.chunk.js",
-    "main.js.map": "/rocketseat-nlw2/static/js/main.de075f6a.chunk.js.map",
+    "main.js": "/rocketseat-nlw2/static/js/main.93d56710.chunk.js",
+    "main.js.map": "/rocketseat-nlw2/static/js/main.93d56710.chunk.js.map",
     "runtime-main.js": "/rocketseat-nlw2/static/js/runtime-main.9f734b65.js",
     "runtime-main.js.map": "/rocketseat-nlw2/static/js/runtime-main.9f734b65.js.map",
     "static/js/2.0ab0ad3b.chunk.js": "/rocketseat-nlw2/static/js/2.0ab0ad3b.chunk.js",
     "static/js/2.0ab0ad3b.chunk.js.map": "/rocketseat-nlw2/static/js/2.0ab0ad3b.chunk.js.map",
     "index.html": "/rocketseat-nlw2/index.html",
-    "precache-manifest.521c2100433e3abd881772f399b38978.js": "/rocketseat-nlw2/precache-manifest.521c2100433e3abd881772f399b38978.js",
+    "precache-manifest.678fa448677e0600a83436c7bd663c34.js": "/rocketseat-nlw2/precache-manifest.678fa448677e0600a83436c7bd663c34.js",
     "service-worker.js": "/rocketseat-nlw2/service-worker.js",
     "static/css/main.9699500e.chunk.css.map": "/rocketseat-nlw2/static/css/main.9699500e.chunk.css.map",
     "static/js/2.0ab0ad3b.chunk.js.LICENSE.txt": "/rocketseat-nlw2/static/js/2.0ab0ad3b.chunk.js.LICENSE.txt",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.9f734b65.js",
     "static/js/2.0ab0ad3b.chunk.js",
     "static/css/main.9699500e.chunk.css",
-    "static/js/main.de075f6a.chunk.js"
+    "static/js/main.93d56710.chunk.js"
   ]
 }
