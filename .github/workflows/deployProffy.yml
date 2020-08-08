@@ -31,10 +31,11 @@ jobs:
       run: cd server && sudo npm i ts-node-dev && npm install
     
     - name: Start local server
-      #working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/server/
+      working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/server/
       run: npm start
       
     - name: Install dependencies on web
+      #working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/web/
       run: cd ../web && npm install
       
     - name: Start react web app
