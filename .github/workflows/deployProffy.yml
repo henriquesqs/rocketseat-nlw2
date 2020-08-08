@@ -31,6 +31,7 @@ jobs:
       run: cd web && npm install
       
     - name: Start react web app
+      working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/web
       run: npm run deploy
       env:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
