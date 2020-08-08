@@ -36,7 +36,8 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"        
         npm run deploy
-      #env:
-      #  repo-token: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        username: henriquesqs
+        password: ${{ secrets.GITHUB_TOKEN }}   
       
     
