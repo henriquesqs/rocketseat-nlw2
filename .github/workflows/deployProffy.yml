@@ -1,0 +1,49 @@
+name: Deploy Proffy
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master, gh-pages ]
+  pull_request:
+    branches: [ master, gh-pages ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+    
+    # Moving to SERVER folder
+    - name: Cd to server folder
+      run: cd server
+    
+    - name: Install dependencies of server
+    - uses: actions/setup-node@v2.1.1
+      with:
+        # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
+        node-version: 10.x
+    - run: npm install && npm start
+    
+    # Moving to WEB folder
+    - name: Cd to web folder
+      run: cd ../web
+  
+    - name: Install dependencies of web
+    - uses: actions/setup-node@v2.1.1
+      with:
+        # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
+        node-version: 10.x
+    - run: npm install
+  
+    # Build REACT application
+    - name: Build React app      
+    - uses: npm run deploy
+      with: 
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
