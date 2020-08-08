@@ -26,15 +26,13 @@ jobs:
       with:
         
         # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
-        node-version: 10.x
-        
-    # Installing node dependencies
-    - name: Install dependencies
-      run: npm install      
+        node-version: 10.x   
       
-    # Starting server on local
-    # Creating build application
-    - name: Build ReactJS application
-      run: cd web && npm run deploy
+    # Installing node dependencies on server folder
+    #- name: Build server application
+    #  run: cd server && npm install && npm run start
       
-        
+    # Installing node dependencies on web folder
+    - name: Build web application
+      run: cd ../web && npm install && npm run deploy
+       
