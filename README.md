@@ -8,7 +8,7 @@
 **[Next-level week](https://nextlevelweek.com/) 2** was a course provided by [Rocketseat](https://rocketseat.com.br/) in order to teach their students how to code using **react.js** with **node.js**. On this course, we've created **Proffy** to web (with responsive design) and mobile platforms. Proffy is a fictional service that allows teachers to offer lectures to students who are searching for online lessons.
 
 ## Notes
-- This repo is automated with Github Actions. On every push and PR, github-pages is auto deployed and updated;
+- This repo is automated with Github Actions. On every push and PR to master branch with changes on **web or server folder** (and only on these folder), github-pages is auto deployed and updated;
 - To see the full behavior of this application, clone this folder and follow the instructions [below](https://github.com/henriquesqs/rocketseat-nlw2/#instructions-server) to start the local server. This app was made using port 3333 so be sure that this port is open on your firewall.
 
 ## Requisites
