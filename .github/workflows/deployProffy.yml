@@ -19,6 +19,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      with:
+          persist-credentials: false
     
     # Setup node.js
     - name: Setup Node.js environment
@@ -31,14 +33,11 @@ jobs:
       run: cd web && npm install
       
     - name: Start react web app
-      working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/web
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git credential fill
-        protocol=https
-        host=github.com
-        username=henriquesqs
-        password=${{ secrets.GITHUB_TOKEN }}       
+      #working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/web
+      uses: JamesIves/github-pages-deploy-action@3.5.9
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: build # The folder the action should deploy.     
       
     
