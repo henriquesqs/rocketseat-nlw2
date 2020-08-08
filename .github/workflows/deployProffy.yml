@@ -34,10 +34,11 @@ jobs:
       working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/web
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"        
-        npm run deploy && henriquesqs
-      env:
-        username: henriquesqs
-        password: ${{ secrets.GITHUB_TOKEN }}   
+        git config --local user.name "GitHub Action"
+        git credential
+        protocol=https
+        username=henriquesqs
+        password=${{ secrets.GITHUB_TOKEN }}  
+      
       
     
