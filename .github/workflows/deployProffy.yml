@@ -35,7 +35,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git credential
+        git credential fill
         protocol=https
         host=github.com
         username=henriquesqs
