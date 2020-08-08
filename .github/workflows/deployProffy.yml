@@ -30,14 +30,15 @@ jobs:
         node-version: 10.x
       
     - name: Install dependencies
+      working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/web
       run: cd web && npm install && npm run build
       
     - name: Start react web app
       #working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/web
-      uses: JamesIves/github-pages-deploy-action@3.5.9
+      uses: JamesIves/github-pages-deploy-action@3.5.9      
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: build # The folder the action should deploy.     
+        FOLDER: web/build # The folder the action should deploy.     
       
     
