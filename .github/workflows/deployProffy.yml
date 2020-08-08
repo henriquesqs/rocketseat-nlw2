@@ -28,18 +28,16 @@ jobs:
         node-version: 10.x
         
     - name: Install dependencies on server
-      run: cd server && sudo npm i ts-node-dev && npm install
+      run: cd server && npm i ts-node-dev && npm install
     
     - name: Start local server
       working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/server/
       run: npm start
       
     - name: Install dependencies on web
-      #working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/web/
       run: cd ../web && npm install
       
     - name: Start react web app
       run: npm run deploy
       env:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-      
