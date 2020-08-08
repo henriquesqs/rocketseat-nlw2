@@ -22,10 +22,10 @@ jobs:
     
     # Moving to SERVER folder
     - name: Cd to server folder
-    - run: cd server
+      run: cd server
     
     - name: Install dependencies of server
-    - uses: actions/setup-node@v2.1.1
+      uses: actions/setup-node@v2.1.1
       with:
         # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
         node-version: 10.x
@@ -33,10 +33,10 @@ jobs:
     
     # Moving to WEB folder
     - name: Cd to web folder
-    - run: cd ../web
+      run: cd ../web
   
     - name: Install dependencies of web
-    - uses: actions/setup-node@v2.1.1
+      uses: actions/setup-node@v2.1.1
       with:
         # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
         node-version: 10.x
@@ -44,6 +44,6 @@ jobs:
   
     # Build REACT application
     - name: Build React app      
-    - uses: npm run deploy
+      uses: npm run deploy
       with: 
         repo-token: ${{ secrets.GITHUB_TOKEN }}
