@@ -28,7 +28,7 @@ jobs:
         node-version: 10.x
         
     - name: Install dependencies on server
-      run: cd server && npm install
+      run: cd server && sudo npm i ts-node-dev && npm install
     
     - name: Start local server
       working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/server/
