@@ -35,6 +35,6 @@ jobs:
     # Starting server on local
     # Creating build application
     - name: Build ReactJS application
-      run: cd /root/rocketseat-nlw2/web && npm run deploy
+      run: cd /rocketseat-nlw2/web && npm run deploy
       
         
