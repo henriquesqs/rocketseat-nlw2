@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {View, Image, Text, TouchableOpacity} from "react-native";
+import {View, Image, Text} from "react-native";
 import styles from "./styles";
 import landingImg from "../../assets/images/landing.png";
 import studyIcon from "../../assets/images/icons/study.png";
