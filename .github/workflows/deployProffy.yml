@@ -22,7 +22,7 @@ jobs:
     
     # Moving to SERVER folder
     - name: Cd to server folder
-      run: cd server
+    - run: cd server
     
     - name: Install dependencies of server
     - uses: actions/setup-node@v2.1.1
@@ -33,7 +33,7 @@ jobs:
     
     # Moving to WEB folder
     - name: Cd to web folder
-      run: cd ../web
+    - run: cd ../web
   
     - name: Install dependencies of web
     - uses: actions/setup-node@v2.1.1
