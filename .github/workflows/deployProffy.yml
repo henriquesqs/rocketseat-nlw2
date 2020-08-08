@@ -34,8 +34,9 @@ jobs:
       working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/web
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git config --global credential.helper wincred
+        git config --local user.name "GitHub Action"        
         npm run deploy
-      env:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+      #env:
+      #  repo-token: ${{ secrets.GITHUB_TOKEN }}
+      
+    
