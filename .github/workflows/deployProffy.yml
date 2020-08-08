@@ -24,15 +24,14 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.1.1
       with:
-        
         # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
         node-version: 10.x
         
-    # Installing node dependencies
-    - name: Install dependencies
-      run: npm install      
+    - name: Install dependencies on server
+      run: cd server && npm install && npm start
       
-    # Starting server on local
-    # Creating build application
-    - name: Build ReactJS application
-      run: ls
+    - name: Install dependencies on web
+      run: cd ../web && npm install && npm start
+      env:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+      
