@@ -32,6 +32,8 @@ jobs:
     
     - name: Start local server
       run: npm start
+      env:
+        path: path /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/server
       
     - name: Install dependencies on web
       run: cd ../web && npm install
