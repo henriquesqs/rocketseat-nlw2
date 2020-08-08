@@ -31,7 +31,7 @@ jobs:
       run: cd server && npm install
     
     - name: Start local server
-      working-directory: path /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/server/
+      working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/server/
       run: npm start
       
     - name: Install dependencies on web
