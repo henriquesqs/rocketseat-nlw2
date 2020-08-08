@@ -32,7 +32,7 @@ jobs:
     
     - name: Start local server
       working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/server/
-      run: npm start
+      run: sudo npm start
       
     - name: Install dependencies on web
       run: cd ../web && npm install
