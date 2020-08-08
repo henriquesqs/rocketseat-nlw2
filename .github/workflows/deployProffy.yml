@@ -30,7 +30,7 @@ jobs:
         node-version: 10.x
       
     - name: Install dependencies
-      run: cd web && npm install
+      run: cd web && npm install && npm run build
       
     - name: Start react web app
       #working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/web
