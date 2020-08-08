@@ -5,7 +5,7 @@ name: Deploy Proffy
 on:
   push:
     branches: [ master, gh-pages ]
-    paths-ignore: mobile
+    paths-ignore: mobile/**
   pull_request:
     branches: [ master, gh-pages ]
 
