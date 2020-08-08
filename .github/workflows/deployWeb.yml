@@ -34,5 +34,5 @@ jobs:
       
     # Installing node dependencies on web folder
     - name: Build web application
-      run: cd ../web && npm install && npm run deploy
+      run: cd web && npm install && npm run deploy
        
