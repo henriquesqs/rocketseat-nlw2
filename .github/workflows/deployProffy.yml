@@ -32,6 +32,9 @@ jobs:
       
     - name: Start react web app
       working-directory: /home/runner/work/rocketseat-nlw2/rocketseat-nlw2/web
-      run: npm run deploy
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        npm run deploy
       env:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
