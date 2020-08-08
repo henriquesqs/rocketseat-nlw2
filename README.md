@@ -20,6 +20,7 @@
 ## Instructions (server)
 - Go to *server* folder;
 - Run the app by using `npm start` or `yarn start`.
+- **(IMPORTANT)** This server must be running on the same network as you're going to run web or mobile applications. By default, running this server on your machine on port 3333 and openning the [gihub-page of this repository](https://henriquesqs.github.io/rocketseat-nlw2/#/) will allow you to run the application with a server connection. 
 
 ## Instructions (web)
 - Go to *web* folder;
@@ -29,3 +30,6 @@
 - Download *expo* app from Play Store ou Apple Store;
 - Go to *mobile* folder;
 - Run the app by using `npm start` or `yarn start`. This shall starts *expo web DevTools*. Use your phone camera to scan the QR Code or connect your phone via adb to use the app on your cellphone.
+
+## Known issues
+- By default, running the server on Windows Subsystem for Linux (WSL) **WON'T** allow you to run the mobile application with server connection, only offline version.
