@@ -8,11 +8,11 @@
 **[Next-level week](https://nextlevelweek.com/) 2** was a course provided by [Rocketseat](https://rocketseat.com.br/) in order to teach their students how to code using **react.js** with **node.js**. On this course, we've created **Proffy** to web (with responsive design) and mobile platforms. Proffy is a fictional service that allows teachers to offer lectures to students who are searching for online lessons.
 
 # Summary
-1. [Requisites](https://github.com/henriquesqs/rocketseat-nlw2#requisites)
-2. [Instructions (server)](https://github.com/henriquesqs/rocketseat-nlw2#instructions-server)
-3. [Instructions (web)](https://github.com/henriquesqs/rocketseat-nlw2#instructions-web)
-4. [Instructions (mobile)](https://github.com/henriquesqs/rocketseat-nlw2#instructions-mobile)
-5. [Notes](https://github.com/henriquesqs/rocketseat-nlw2#notes)
+1. [Requisites](https://github.com/henriquesqs/rocketseat-nlw2#requisites);
+2. [Instructions (server)](https://github.com/henriquesqs/rocketseat-nlw2#instructions-server);
+3. [Instructions (web)](https://github.com/henriquesqs/rocketseat-nlw2#instructions-web);
+4. [Instructions (mobile)](https://github.com/henriquesqs/rocketseat-nlw2#instructions-mobile);
+5. [Notes](https://github.com/henriquesqs/rocketseat-nlw2#notes).
 
 ## Requisites
 - You must have [npm](https://nodejs.org/en/) or [yarn](https://yarnpkg.com/) package manager in order to install the required packages. 
